@@ -1,0 +1,275 @@
+[
+    {
+        "id": "1",
+        "first_name": "Steven",
+        "last_name": "King",
+        "role_id": "1",
+        "manager_id": "1"
+    },
+    {
+        "id": "2",
+        "first_name": "Lex",
+        "last_name": "De Haan",
+        "role_id": "2",
+        "manager_id": "1"
+    },
+    {
+        "id": "3",
+        "first_name": "Neena",
+        "last_name": "Kochhar",
+        "role_id": "2",
+        "manager_id": "1"
+    },
+    {
+        "id": "4",
+        "first_name": "Michael",
+        "last_name": "Hartstein",
+        "role_id": "3",
+        "manager_id": "1"
+    },
+    {
+        "id": "5",
+        "first_name": "Alexander",
+        "last_name": "Hunold",
+        "role_id": "4",
+        "manager_id": "2"
+    },
+    {
+        "id": "6",
+        "first_name": "Nancy",
+        "last_name": "Greenberg",
+        "role_id": "5",
+        "manager_id": "3"
+    },
+    {
+        "id": "7",
+        "first_name": "Matthew",
+        "last_name": "Weiss",
+        "role_id": "6",
+        "manager_id": "1"
+    },
+    {
+        "id": "8",
+        "first_name": "Adam",
+        "last_name": "Fripp",
+        "role_id": "6",
+        "manager_id": "1"
+    },
+    {
+        "id": "9",
+        "first_name": "Payam",
+        "last_name": "Kaufling",
+        "role_id": "6",
+        "manager_id": "1"
+    },
+    {
+        "id": "10",
+        "first_name": "Shanta",
+        "last_name": "Vollman",
+        "role_id": "6",
+        "manager_id": "1"
+    },
+    {
+        "id": "11",
+        "first_name": "Jennifer",
+        "last_name": "Whalen",
+        "role_id": "7",
+        "manager_id": "3"
+    },
+    {
+        "id": "12",
+        "first_name": "Susan",
+        "last_name": "Mavris",
+        "role_id": "8",
+        "manager_id": "3"
+    },
+    {
+        "id": "13",
+        "first_name": "Hermann",
+        "last_name": "Baer",
+        "role_id": "9",
+        "manager_id": "3"
+    },
+    {
+        "id": "14",
+        "first_name": "Pat",
+        "last_name": "Fay",
+        "role_id": "10",
+        "manager_id": "4"
+    },
+    {
+        "id": "15",
+        "first_name": "Bruce",
+        "last_name": "Ernst",
+        "role_id": "11",
+        "manager_id": "5"
+    },
+    {
+        "id": "16",
+        "first_name": "David",
+        "last_name": "Austin",
+        "role_id": "11",
+        "manager_id": "5"
+    },
+    {
+        "id": "17",
+        "first_name": "Valli",
+        "last_name": "Pataballa",
+        "role_id": "11",
+        "manager_id": "5"
+    },
+    {
+        "id": "18",
+        "first_name": "Diana",
+        "last_name": "Lorentz",
+        "role_id": "11",
+        "manager_id": "5"
+    },
+    {
+        "id": "19",
+        "first_name": "Daniel",
+        "last_name": "Faviet",
+        "role_id": "12",
+        "manager_id": "6"
+    },
+    {
+        "id": "20",
+        "first_name": "John",
+        "last_name": "Chen",
+        "role_id": "12",
+        "manager_id": "6"
+    },
+    {
+        "id": "21",
+        "first_name": "Ismael",
+        "last_name": "Sciarra",
+        "role_id": "12",
+        "manager_id": "6"
+    },
+    {
+        "id": "22",
+        "first_name": "Jose Manuel",
+        "last_name": "Urman",
+        "role_id": "12",
+        "manager_id": "6"
+    },
+    {
+        "id": "23",
+        "first_name": "Luis",
+        "last_name": "Popp",
+        "role_id": "12",
+        "manager_id": "6"
+    },
+    {
+        "id": "24",
+        "first_name": "Julia",
+        "last_name": "Nayer",
+        "role_id": "13",
+        "manager_id": "7"
+    },
+    {
+        "id": "25",
+        "first_name": "Irene",
+        "last_name": "Mikkilineni",
+        "role_id": "13",
+        "manager_id": "7"
+    },
+    {
+        "id": "26",
+        "first_name": "James",
+        "last_name": "Landry",
+        "role_id": "13",
+        "manager_id": "7"
+    },
+    {
+        "id": "27",
+        "first_name": "Steven",
+        "last_name": "Markle",
+        "role_id": "13",
+        "manager_id": "7"
+    },
+    {
+        "id": "28",
+        "first_name": "Laura",
+        "last_name": "Bissot",
+        "role_id": "14",
+        "manager_id": "8"
+    },
+    {
+        "id": "29",
+        "first_name": "Mozhe",
+        "last_name": "Atkinson",
+        "role_id": "14",
+        "manager_id": "8"
+    },
+    {
+        "id": "30",
+        "first_name": "James",
+        "last_name": "Marlow",
+        "role_id": "14",
+        "manager_id": "8"
+    },
+    {
+        "id": "31",
+        "first_name": "TJ",
+        "last_name": "Olson",
+        "role_id": "14",
+        "manager_id": "8"
+    },
+    {
+        "id": "32",
+        "first_name": "Jason",
+        "last_name": "Mallin",
+        "role_id": "15",
+        "manager_id": "9"
+    },
+    {
+        "id": "33",
+        "first_name": "Michael",
+        "last_name": "Rogers",
+        "role_id": "15",
+        "manager_id": "9"
+    },
+    {
+        "id": "34",
+        "first_name": "Ki",
+        "last_name": "Gee",
+        "role_id": "15",
+        "manager_id": "9"
+    },
+    {
+        "id": "35",
+        "first_name": "Hazel",
+        "last_name": "Philtanker",
+        "role_id": "15",
+        "manager_id": "9"
+    },
+    {
+        "id": "36",
+        "first_name": "Renske",
+        "last_name": "Ladwig",
+        "role_id": "15",
+        "manager_id": "10"
+    },
+    {
+        "id": "37",
+        "first_name": "Stephen",
+        "last_name": "Stiles",
+        "role_id": "15",
+        "manager_id": "10"
+    },
+    {
+        "id": "38",
+        "first_name": "John",
+        "last_name": "Seo",
+        "role_id": "15",
+        "manager_id": "10"
+    },
+    {
+        "id": "39",
+        "first_name": "Joshua",
+        "last_name": "Patel",
+        "role_id": "15",
+        "manager_id": "10"
+    }
+]

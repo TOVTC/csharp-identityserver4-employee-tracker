@@ -1,0 +1,107 @@
+[
+    {
+        "id": "1",
+        "job_title": "President",
+        "salary": "70000",
+        "dept_id": "1",
+        "is_management": "1"
+    },
+    {
+        "id": "2",
+        "job_title": "Vice President",
+        "salary": "60000",
+        "dept_id": "1",
+        "is_management": "1"
+    },
+    {
+        "id": "3",
+        "job_title": "Marketing Manager",
+        "salary": "50000",
+        "dept_id": "2",
+        "is_management": "1"
+    },
+    {
+        "id": "4",
+        "job_title": "IT Manager",
+        "salary": "55000",
+        "dept_id": "3",
+        "is_management": "1"
+    },
+    {
+        "id": "5",
+        "job_title": "Finance Manager",
+        "salary": "50000",
+        "dept_id": "4",
+        "is_management": "1"
+    },
+    {
+        "id": "6",
+        "job_title": "Operations Manager",
+        "salary": "50000",
+        "dept_id": "5",
+        "is_management": "1"
+    },
+    {
+        "id": "7",
+        "job_title": "Admin Assistant",
+        "salary": "35000",
+        "dept_id": "6",
+        "is_management": "0"
+    },
+    {
+        "id": "8",
+        "job_title": "HR Rep",
+        "salary": "35000",
+        "dept_id": "7",
+        "is_management": "0"
+    },
+    {
+        "id": "9",
+        "job_title": "PR Rep",
+        "salary": "35000",
+        "dept_id": "8",
+        "is_management": "0"
+    },
+    {
+        "id": "10",
+        "job_title": "Marketing Rep",
+        "salary": "35000",
+        "dept_id": "2",
+        "is_management": "0"
+    },
+    {
+        "id": "11",
+        "job_title": "Developer",
+        "salary": "40000",
+        "dept_id": "3",
+        "is_management": "0"
+    },
+    {
+        "id": "12",
+        "job_title": "Accountant",
+        "salary": "35000",
+        "dept_id": "4",
+        "is_management": "0"
+    },
+    {
+        "id": "13",
+        "job_title": "Data Clerk",
+        "salary": "31000",
+        "dept_id": "5",
+        "is_management": "0"
+    },
+    {
+        "id": "14",
+        "job_title": "Customer Service",
+        "salary": "31000",
+        "dept_id": "5",
+        "is_management": "0"
+    },
+    {
+        "id": "15",
+        "job_title": "Operations Attendant",
+        "salary": "31000",
+        "dept_id": "5",
+        "is_management": "0"
+    }
+]
