@@ -11,7 +11,7 @@
             </h2>
             <v-data-table
                 :headers="departmentHeaders"
-                :items="departments"
+                :items="budgetedDepartments"
                 :items-per-page="10"
                 class="elevation-1"
             ></v-data-table>
@@ -57,7 +57,8 @@
       data: () => ({
         departmentHeaders: [
             { text: "id", value: "id" },
-            { text: "Department", value: "department_name" }
+            { text: "Department", value: "department_name" },
+            { text: "Budget", value: "budget"}
         ],
         roleHeaders: [
             { text: "id", value: "id" },
@@ -490,6 +491,7 @@
                 "manager_id": "10"
             }
         ],
+        budgetedDepartments: [],
         joinedRoles: [],
         joinedEmployees: [],
       }),
@@ -505,7 +507,7 @@
         },
         findDepartment(deptId) {
             let department = this.departments.find(dept => dept.id === deptId)
-            return department.department_name
+            return department
         },
         findManager(mgrId) {
             let manager = this.employees.find(employee => employee.id === mgrId)
@@ -515,13 +517,28 @@
             let position = this.roles.find(role => role.id === roleId)
             return position
         },
+        findBudget(deptId) {
+            let budget = []
+            let deptEmp = this.employees.filter(employee => this.findRole(employee.role_id).dept_id === deptId)
+            deptEmp.forEach(emp => budget.push(parseInt(this.findRole(emp.role_id).salary)))
+            return this.formatSalary(budget.reduce((a, cv) => a + cv, 0))
+        },
+        budgetDepartments(departments) {
+            departments.forEach(department => {
+                this.budgetedDepartments.push({
+                    "id": department.id,
+                    "department_name": department.department_name,
+                    "budget": this.findBudget(department.id)
+                })
+            })
+        },
         joinRoleTables(roles) {
             roles.forEach(role => {
                 this.joinedRoles.push({
                     "id": role.id,
                     "job_title": role.job_title,
                     "salary": this.formatSalary(role.salary),
-                    "dept_id": this.findDepartment(role.dept_id),
+                    "dept_id": this.findDepartment(role.dept_id).department_name,
                     "is_management": this.isManagement(role.is_management)
                 })
             })
@@ -533,13 +550,14 @@
                     "employee_name": `${employee.last_name}, ${employee.first_name}`,
                     "job_title": this.findRole(employee.role_id).job_title,
                     "salary": this.formatSalary(this.findRole(employee.role_id).salary),
-                    "department": this.findDepartment(this.findRole(employee.role_id).dept_id),
+                    "department": this.findDepartment(this.findRole(employee.role_id).dept_id).department_name,
                     "manager_name": this.findManager(employee.manager_id)
                 })
             })
         }
       },
       async created() {
+        this.budgetDepartments(this.departments)
         this.joinRoleTables(this.roles)
         this.joinEmployeeTables(this.employees)
       }
