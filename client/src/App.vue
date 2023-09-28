@@ -2,27 +2,12 @@
   <v-app>
     <v-app-bar
       app
-      color="primary"
+      color="green"
       dark
     >
       <div class="d-flex align-center">
-        <v-img
-          alt="Vuetify Logo"
-          class="shrink mr-2"
-          contain
-          src="https://cdn.vuetifyjs.com/images/logos/vuetify-logo-dark.png"
-          transition="scale-transition"
-          width="40"
-        />
-
-        <v-img
-          alt="Vuetify Name"
-          class="shrink mt-1 hidden-sm-and-down"
-          contain
-          min-width="100"
-          src="https://cdn.vuetifyjs.com/images/logos/vuetify-name-dark.png"
-          width="100"
-        />
+        <v-icon x-large class="ma-3">mdi-badge-account-horizontal</v-icon>
+        <h1 class="ma-3">Employee Tracker</h1>
       </div>
 
       <v-spacer></v-spacer>
@@ -38,20 +23,20 @@
     </v-app-bar>
 
     <v-main>
-      <HelloWorld/>
+      <HomeView />
     </v-main>
   </v-app>
 </template>
 
 <script>
-import HelloWorld from './components/HelloWorld';
+import HomeView from './views/HomeView.vue';
 
 export default {
   name: 'App',
 
   components: {
-    HelloWorld,
-  },
+    HomeView
+},
 
   data: () => ({
     //
