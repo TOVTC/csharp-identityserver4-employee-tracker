@@ -23,19 +23,19 @@
     </v-app-bar>
 
     <v-main>
-      <HomeView />
+      <TrackerView />
     </v-main>
   </v-app>
 </template>
 
 <script>
-import HomeView from './views/HomeView.vue';
+import TrackerView from './views/TrackerView.vue';
 
 export default {
   name: 'App',
 
   components: {
-    HomeView
+    TrackerView
 },
 
   data: () => ({
