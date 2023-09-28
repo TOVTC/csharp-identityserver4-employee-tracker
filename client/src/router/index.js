@@ -1,6 +1,6 @@
 import Vue from 'vue'
 import VueRouter from 'vue-router'
-import HomeView from '../views/HomeView.vue'
+import HomeView from '@/views/HomeView.vue'
 
 Vue.use(VueRouter)
 
@@ -13,12 +13,12 @@ const routes = [
   {
     path: '/tracker',
     name: 'tracker',
-    component: () => import('../views/TrackerView.vue'),
+    component: () => import('@/views/TrackerView.vue'),
   },
   {
     path: '/:catchAll(.*)',
     name: '404',
-    component: () => import('@/views/HomeView.vue'),
+    component: HomeView,
   },
 ]
 
