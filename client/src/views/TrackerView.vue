@@ -57,438 +57,438 @@
       data: () => ({
         departmentHeaders: [
             { text: "id", value: "id" },
-            { text: "Department", value: "department_name" },
+            { text: "Department", value: "departmentName" },
             { text: "Budget", value: "budget"}
         ],
         roleHeaders: [
             { text: "id", value: "id" },
-            { text: "Job Title", value: "job_title" },
+            { text: "Job Title", value: "jobTitle" },
             { text: "Salary", value: "salary" },
-            { text: "Department", value: "dept_id" },
-            { text: "Is Management", value: "is_management" }
+            { text: "Department", value: "deptId" },
+            { text: "Is Management", value: "isManagement" }
         ],
         employeeHeaders: [
             { text: "id", value: "id" },
-            { text: "Employee Name", value: "employee_name" },
-            { text: "Job Title", value: "job_title" },
+            { text: "Employee Name", value: "employeeName" },
+            { text: "Job Title", value: "jobTitle" },
             { text: "Salary", value: "salary" },
             { text: "Department", value: "department" },
-            { text: "Manager Name", value: "manager_name" },
+            { text: "Manager Name", value: "managerName" },
         ],
         departments: [
             {
                 "id": "6",
-                "department_name": "Administration"
+                "departmentName": "Administration"
             },
             {
                 "id": "1",
-                "department_name": "Executive"
+                "departmentName": "Executive"
             },
             {
                 "id": "4",
-                "department_name": "Finance"
+                "departmentName": "Finance"
             },
             {
                 "id": "7",
-                "department_name": "Human Resources"
+                "departmentName": "Human Resources"
             },
             {
                 "id": "3",
-                "department_name": "Info Tech"
+                "departmentName": "Info Tech"
             },
             {
                 "id": "2",
-                "department_name": "Marketing"
+                "departmentName": "Marketing"
             },
             {
                 "id": "5",
-                "department_name": "Operations"
+                "departmentName": "Operations"
             },
             {
                 "id": "8",
-                "department_name": "Public Relations"
+                "departmentName": "Public Relations"
             }
         ],
         roles: [
             {
                 "id": "1",
-                "job_title": "President",
+                "jobTitle": "President",
                 "salary": "70000",
-                "dept_id": "1",
-                "is_management": "1"
+                "deptId": "1",
+                "isManagement": "1"
             },
             {
                 "id": "2",
-                "job_title": "Vice President",
+                "jobTitle": "Vice President",
                 "salary": "60000",
-                "dept_id": "1",
-                "is_management": "1"
+                "deptId": "1",
+                "isManagement": "1"
             },
             {
                 "id": "3",
-                "job_title": "Marketing Manager",
+                "jobTitle": "Marketing Manager",
                 "salary": "50000",
-                "dept_id": "2",
-                "is_management": "1"
+                "deptId": "2",
+                "isManagement": "1"
             },
             {
                 "id": "4",
-                "job_title": "IT Manager",
+                "jobTitle": "IT Manager",
                 "salary": "55000",
-                "dept_id": "3",
-                "is_management": "1"
+                "deptId": "3",
+                "isManagement": "1"
             },
             {
                 "id": "5",
-                "job_title": "Finance Manager",
+                "jobTitle": "Finance Manager",
                 "salary": "50000",
-                "dept_id": "4",
-                "is_management": "1"
+                "deptId": "4",
+                "isManagement": "1"
             },
             {
                 "id": "6",
-                "job_title": "Operations Manager",
+                "jobTitle": "Operations Manager",
                 "salary": "50000",
-                "dept_id": "5",
-                "is_management": "1"
+                "deptId": "5",
+                "isManagement": "1"
             },
             {
                 "id": "7",
-                "job_title": "Admin Assistant",
+                "jobTitle": "Admin Assistant",
                 "salary": "35000",
-                "dept_id": "6",
-                "is_management": "0"
+                "deptId": "6",
+                "isManagement": "0"
             },
             {
                 "id": "8",
-                "job_title": "HR Rep",
+                "jobTitle": "HR Rep",
                 "salary": "35000",
-                "dept_id": "7",
-                "is_management": "0"
+                "deptId": "7",
+                "isManagement": "0"
             },
             {
                 "id": "9",
-                "job_title": "PR Rep",
+                "jobTitle": "PR Rep",
                 "salary": "35000",
-                "dept_id": "8",
-                "is_management": "0"
+                "deptId": "8",
+                "isManagement": "0"
             },
             {
                 "id": "10",
-                "job_title": "Marketing Rep",
+                "jobTitle": "Marketing Rep",
                 "salary": "35000",
-                "dept_id": "2",
-                "is_management": "0"
+                "deptId": "2",
+                "isManagement": "0"
             },
             {
                 "id": "11",
-                "job_title": "Developer",
+                "jobTitle": "Developer",
                 "salary": "40000",
-                "dept_id": "3",
-                "is_management": "0"
+                "deptId": "3",
+                "isManagement": "0"
             },
             {
                 "id": "12",
-                "job_title": "Accountant",
+                "jobTitle": "Accountant",
                 "salary": "35000",
-                "dept_id": "4",
-                "is_management": "0"
+                "deptId": "4",
+                "isManagement": "0"
             },
             {
                 "id": "13",
-                "job_title": "Data Clerk",
+                "jobTitle": "Data Clerk",
                 "salary": "31000",
-                "dept_id": "5",
-                "is_management": "0"
+                "deptId": "5",
+                "isManagement": "0"
             },
             {
                 "id": "14",
-                "job_title": "Customer Service",
+                "jobTitle": "Customer Service",
                 "salary": "31000",
-                "dept_id": "5",
-                "is_management": "0"
+                "deptId": "5",
+                "isManagement": "0"
             },
             {
                 "id": "15",
-                "job_title": "Operations Attendant",
+                "jobTitle": "Operations Attendant",
                 "salary": "31000",
-                "dept_id": "5",
-                "is_management": "0"
+                "deptId": "5",
+                "isManagement": "0"
             }
         ],
         employees: [
             {
                 "id": "1",
-                "first_name": "Steven",
-                "last_name": "King",
-                "role_id": "1",
-                "manager_id": "1"
+                "firstName": "Steven",
+                "lastName": "King",
+                "roleId": "1",
+                "managerId": "1"
             },
             {
                 "id": "2",
-                "first_name": "Lex",
-                "last_name": "De Haan",
-                "role_id": "2",
-                "manager_id": "1"
+                "firstName": "Lex",
+                "lastName": "De Haan",
+                "roleId": "2",
+                "managerId": "1"
             },
             {
                 "id": "3",
-                "first_name": "Neena",
-                "last_name": "Kochhar",
-                "role_id": "2",
-                "manager_id": "1"
+                "firstName": "Neena",
+                "lastName": "Kochhar",
+                "roleId": "2",
+                "managerId": "1"
             },
             {
                 "id": "4",
-                "first_name": "Michael",
-                "last_name": "Hartstein",
-                "role_id": "3",
-                "manager_id": "1"
+                "firstName": "Michael",
+                "lastName": "Hartstein",
+                "roleId": "3",
+                "managerId": "1"
             },
             {
                 "id": "5",
-                "first_name": "Alexander",
-                "last_name": "Hunold",
-                "role_id": "4",
-                "manager_id": "2"
+                "firstName": "Alexander",
+                "lastName": "Hunold",
+                "roleId": "4",
+                "managerId": "2"
             },
             {
                 "id": "6",
-                "first_name": "Nancy",
-                "last_name": "Greenberg",
-                "role_id": "5",
-                "manager_id": "3"
+                "firstName": "Nancy",
+                "lastName": "Greenberg",
+                "roleId": "5",
+                "managerId": "3"
             },
             {
                 "id": "7",
-                "first_name": "Matthew",
-                "last_name": "Weiss",
-                "role_id": "6",
-                "manager_id": "1"
+                "firstName": "Matthew",
+                "lastName": "Weiss",
+                "roleId": "6",
+                "managerId": "1"
             },
             {
                 "id": "8",
-                "first_name": "Adam",
-                "last_name": "Fripp",
-                "role_id": "6",
-                "manager_id": "1"
+                "firstName": "Adam",
+                "lastName": "Fripp",
+                "roleId": "6",
+                "managerId": "1"
             },
             {
                 "id": "9",
-                "first_name": "Payam",
-                "last_name": "Kaufling",
-                "role_id": "6",
-                "manager_id": "1"
+                "firstName": "Payam",
+                "lastName": "Kaufling",
+                "roleId": "6",
+                "managerId": "1"
             },
             {
                 "id": "10",
-                "first_name": "Shanta",
-                "last_name": "Vollman",
-                "role_id": "6",
-                "manager_id": "1"
+                "firstName": "Shanta",
+                "lastName": "Vollman",
+                "roleId": "6",
+                "managerId": "1"
             },
             {
                 "id": "11",
-                "first_name": "Jennifer",
-                "last_name": "Whalen",
-                "role_id": "7",
-                "manager_id": "3"
+                "firstName": "Jennifer",
+                "lastName": "Whalen",
+                "roleId": "7",
+                "managerId": "3"
             },
             {
                 "id": "12",
-                "first_name": "Susan",
-                "last_name": "Mavris",
-                "role_id": "8",
-                "manager_id": "3"
+                "firstName": "Susan",
+                "lastName": "Mavris",
+                "roleId": "8",
+                "managerId": "3"
             },
             {
                 "id": "13",
-                "first_name": "Hermann",
-                "last_name": "Baer",
-                "role_id": "9",
-                "manager_id": "3"
+                "firstName": "Hermann",
+                "lastName": "Baer",
+                "roleId": "9",
+                "managerId": "3"
             },
             {
                 "id": "14",
-                "first_name": "Pat",
-                "last_name": "Fay",
-                "role_id": "10",
-                "manager_id": "4"
+                "firstName": "Pat",
+                "lastName": "Fay",
+                "roleId": "10",
+                "managerId": "4"
             },
             {
                 "id": "15",
-                "first_name": "Bruce",
-                "last_name": "Ernst",
-                "role_id": "11",
-                "manager_id": "5"
+                "firstName": "Bruce",
+                "lastName": "Ernst",
+                "roleId": "11",
+                "managerId": "5"
             },
             {
                 "id": "16",
-                "first_name": "David",
-                "last_name": "Austin",
-                "role_id": "11",
-                "manager_id": "5"
+                "firstName": "David",
+                "lastName": "Austin",
+                "roleId": "11",
+                "managerId": "5"
             },
             {
                 "id": "17",
-                "first_name": "Valli",
-                "last_name": "Pataballa",
-                "role_id": "11",
-                "manager_id": "5"
+                "firstName": "Valli",
+                "lastName": "Pataballa",
+                "roleId": "11",
+                "managerId": "5"
             },
             {
                 "id": "18",
-                "first_name": "Diana",
-                "last_name": "Lorentz",
-                "role_id": "11",
-                "manager_id": "5"
+                "firstName": "Diana",
+                "lastName": "Lorentz",
+                "roleId": "11",
+                "managerId": "5"
             },
             {
                 "id": "19",
-                "first_name": "Daniel",
-                "last_name": "Faviet",
-                "role_id": "12",
-                "manager_id": "6"
+                "firstName": "Daniel",
+                "lastName": "Faviet",
+                "roleId": "12",
+                "managerId": "6"
             },
             {
                 "id": "20",
-                "first_name": "John",
-                "last_name": "Chen",
-                "role_id": "12",
-                "manager_id": "6"
+                "firstName": "John",
+                "lastName": "Chen",
+                "roleId": "12",
+                "managerId": "6"
             },
             {
                 "id": "21",
-                "first_name": "Ismael",
-                "last_name": "Sciarra",
-                "role_id": "12",
-                "manager_id": "6"
+                "firstName": "Ismael",
+                "lastName": "Sciarra",
+                "roleId": "12",
+                "managerId": "6"
             },
             {
                 "id": "22",
-                "first_name": "Jose Manuel",
-                "last_name": "Urman",
-                "role_id": "12",
-                "manager_id": "6"
+                "firstName": "Jose Manuel",
+                "lastName": "Urman",
+                "roleId": "12",
+                "managerId": "6"
             },
             {
                 "id": "23",
-                "first_name": "Luis",
-                "last_name": "Popp",
-                "role_id": "12",
-                "manager_id": "6"
+                "firstName": "Luis",
+                "lastName": "Popp",
+                "roleId": "12",
+                "managerId": "6"
             },
             {
                 "id": "24",
-                "first_name": "Julia",
-                "last_name": "Nayer",
-                "role_id": "13",
-                "manager_id": "7"
+                "firstName": "Julia",
+                "lastName": "Nayer",
+                "roleId": "13",
+                "managerId": "7"
             },
             {
                 "id": "25",
-                "first_name": "Irene",
-                "last_name": "Mikkilineni",
-                "role_id": "13",
-                "manager_id": "7"
+                "firstName": "Irene",
+                "lastName": "Mikkilineni",
+                "roleId": "13",
+                "managerId": "7"
             },
             {
                 "id": "26",
-                "first_name": "James",
-                "last_name": "Landry",
-                "role_id": "13",
-                "manager_id": "7"
+                "firstName": "James",
+                "lastName": "Landry",
+                "roleId": "13",
+                "managerId": "7"
             },
             {
                 "id": "27",
-                "first_name": "Steven",
-                "last_name": "Markle",
-                "role_id": "13",
-                "manager_id": "7"
+                "firstName": "Steven",
+                "lastName": "Markle",
+                "roleId": "13",
+                "managerId": "7"
             },
             {
                 "id": "28",
-                "first_name": "Laura",
-                "last_name": "Bissot",
-                "role_id": "14",
-                "manager_id": "8"
+                "firstName": "Laura",
+                "lastName": "Bissot",
+                "roleId": "14",
+                "managerId": "8"
             },
             {
                 "id": "29",
-                "first_name": "Mozhe",
-                "last_name": "Atkinson",
-                "role_id": "14",
-                "manager_id": "8"
+                "firstName": "Mozhe",
+                "lastName": "Atkinson",
+                "roleId": "14",
+                "managerId": "8"
             },
             {
                 "id": "30",
-                "first_name": "James",
-                "last_name": "Marlow",
-                "role_id": "14",
-                "manager_id": "8"
+                "firstName": "James",
+                "lastName": "Marlow",
+                "roleId": "14",
+                "managerId": "8"
             },
             {
                 "id": "31",
-                "first_name": "TJ",
-                "last_name": "Olson",
-                "role_id": "14",
-                "manager_id": "8"
+                "firstName": "TJ",
+                "lastName": "Olson",
+                "roleId": "14",
+                "managerId": "8"
             },
             {
                 "id": "32",
-                "first_name": "Jason",
-                "last_name": "Mallin",
-                "role_id": "15",
-                "manager_id": "9"
+                "firstName": "Jason",
+                "lastName": "Mallin",
+                "roleId": "15",
+                "managerId": "9"
             },
             {
                 "id": "33",
-                "first_name": "Michael",
-                "last_name": "Rogers",
-                "role_id": "15",
-                "manager_id": "9"
+                "firstName": "Michael",
+                "lastName": "Rogers",
+                "roleId": "15",
+                "managerId": "9"
             },
             {
                 "id": "34",
-                "first_name": "Ki",
-                "last_name": "Gee",
-                "role_id": "15",
-                "manager_id": "9"
+                "firstName": "Ki",
+                "lastName": "Gee",
+                "roleId": "15",
+                "managerId": "9"
             },
             {
                 "id": "35",
-                "first_name": "Hazel",
-                "last_name": "Philtanker",
-                "role_id": "15",
-                "manager_id": "9"
+                "firstName": "Hazel",
+                "lastName": "Philtanker",
+                "roleId": "15",
+                "managerId": "9"
             },
             {
                 "id": "36",
-                "first_name": "Renske",
-                "last_name": "Ladwig",
-                "role_id": "15",
-                "manager_id": "10"
+                "firstName": "Renske",
+                "lastName": "Ladwig",
+                "roleId": "15",
+                "managerId": "10"
             },
             {
                 "id": "37",
-                "first_name": "Stephen",
-                "last_name": "Stiles",
-                "role_id": "15",
-                "manager_id": "10"
+                "firstName": "Stephen",
+                "lastName": "Stiles",
+                "roleId": "15",
+                "managerId": "10"
             },
             {
                 "id": "38",
-                "first_name": "John",
-                "last_name": "Seo",
-                "role_id": "15",
-                "manager_id": "10"
+                "firstName": "John",
+                "lastName": "Seo",
+                "roleId": "15",
+                "managerId": "10"
             },
             {
                 "id": "39",
-                "first_name": "Joshua",
-                "last_name": "Patel",
-                "role_id": "15",
-                "manager_id": "10"
+                "firstName": "Joshua",
+                "lastName": "Patel",
+                "roleId": "15",
+                "managerId": "10"
             }
         ],
         budgetedDepartments: [],
@@ -511,7 +511,7 @@
         },
         findManager(mgrId) {
             let manager = this.employees.find(employee => employee.id === mgrId)
-            return `${manager.last_name}, ${manager.first_name}`
+            return `${manager.lastName}, ${manager.firstName}`
         },
         findRole(roleId) {
             let position = this.roles.find(role => role.id === roleId)
@@ -519,15 +519,15 @@
         },
         findBudget(deptId) {
             let budget = []
-            let deptEmp = this.employees.filter(employee => this.findRole(employee.role_id).dept_id === deptId)
-            deptEmp.forEach(emp => budget.push(parseInt(this.findRole(emp.role_id).salary)))
+            let deptEmp = this.employees.filter(employee => this.findRole(employee.roleId).deptId === deptId)
+            deptEmp.forEach(emp => budget.push(parseInt(this.findRole(emp.roleId).salary)))
             return this.formatSalary(budget.reduce((a, cv) => a + cv, 0))
         },
         budgetDepartments(departments) {
             departments.forEach(department => {
                 this.budgetedDepartments.push({
                     "id": department.id,
-                    "department_name": department.department_name,
+                    "departmentName": department.departmentName,
                     "budget": this.findBudget(department.id)
                 })
             })
@@ -536,10 +536,10 @@
             roles.forEach(role => {
                 this.joinedRoles.push({
                     "id": role.id,
-                    "job_title": role.job_title,
+                    "jobTitle": role.jobTitle,
                     "salary": this.formatSalary(role.salary),
-                    "dept_id": this.findDepartment(role.dept_id).department_name,
-                    "is_management": this.isManagement(role.is_management)
+                    "deptId": this.findDepartment(role.deptId).departmentName,
+                    "isManagement": this.isManagement(role.isManagement)
                 })
             })
         },
@@ -547,11 +547,11 @@
             employees.forEach(employee => {
                 this.joinedEmployees.push({
                     "id": employee.id,
-                    "employee_name": `${employee.last_name}, ${employee.first_name}`,
-                    "job_title": this.findRole(employee.role_id).job_title,
-                    "salary": this.formatSalary(this.findRole(employee.role_id).salary),
-                    "department": this.findDepartment(this.findRole(employee.role_id).dept_id).department_name,
-                    "manager_name": this.findManager(employee.manager_id)
+                    "employeeName": `${employee.lastName}, ${employee.firstName}`,
+                    "jobTitle": this.findRole(employee.roleId).jobTitle,
+                    "salary": this.formatSalary(this.findRole(employee.roleId).salary),
+                    "department": this.findDepartment(this.findRole(employee.roleId).deptId).departmentName,
+                    "managerName": this.findManager(employee.managerId)
                 })
             })
         }
