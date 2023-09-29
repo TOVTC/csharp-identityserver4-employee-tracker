@@ -18,9 +18,9 @@
         href="https://github.com/vuetifyjs/vuetify/releases/latest"
         target="_blank"
         text
+        class="light-green"
       >
-        <span class="mr-2">Latest Release</span>
-        <v-icon>mdi-open-in-new</v-icon>
+        <span class="mr-2">Logout</span>
       </v-btn>
     </v-app-bar>
 

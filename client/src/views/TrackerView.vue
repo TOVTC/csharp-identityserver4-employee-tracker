@@ -52,6 +52,7 @@
   </template>
   
   <script>
+//   import TrackerService from '@/services/TrackerService'
     export default {
       name: 'HomeView',
       data: () => ({
@@ -557,6 +558,12 @@
         }
       },
       async created() {
+        // let departments = await TrackerService.getDepartments()
+        // let roles = await TrackerService.getRoles()
+        // let employees = await TrackerService.getEmployees()
+        // console.log(departments)
+        // console.log(roles)
+        // console.log(employees)
         this.budgetDepartments(this.departments)
         this.joinRoleTables(this.roles)
         this.joinEmployeeTables(this.employees)

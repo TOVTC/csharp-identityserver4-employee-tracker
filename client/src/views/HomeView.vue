@@ -18,7 +18,7 @@
             ref="form"
             v-model="valid"
             class="ma-5 pa-5"
-            @submit.prevent="search"
+            @submit.prevent="login"
             >
               <v-text-field
                 v-model="username"
@@ -48,6 +48,15 @@
               >
                 Submit
               </v-btn>
+              <v-btn
+                :disabled="!loggedIn"
+                type="submit"
+                color="success"
+                class="mr-4"
+                @click="logout"
+              >
+                Logout
+              </v-btn>
             </v-form>
           </v-card>
         </v-row>
@@ -57,12 +66,14 @@
 </template>
 
 <script>
-import router from '@/router'
+// import router from '@/router'
+
 
 export default {
   name: 'HomeView',
   data: () => ({
     valid: false,
+    loggedIn: false,
     visible: false,
     username: '',
     password: '',
@@ -78,11 +89,15 @@ export default {
     }
   }),
   methods: {
-    search() {
+    login() {
       this.$refs.form.validate()
       if (this.valid) {
-        router.push({ name: 'tracker' })
+        this.loggedIn = true
+        // router.push({ name: 'tracker' })
       }
+    },
+    logout() {
+      this.loggedIn = false
     }
   }
 }
