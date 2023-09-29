@@ -4,5 +4,5 @@ module.exports = defineConfig({
     'vuetify'
   ],
 
-  outputDir: '../vueApi/wwwroot'
+  outputDir: '../server/src/VueApi/wwwroot'
 })
