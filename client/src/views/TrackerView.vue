@@ -498,7 +498,7 @@
       }),
       methods: {
         isManagement(bool) {
-            return bool === "1" ? "yes" : "no"
+            return parseInt(bool) === 1 ? "yes" : "no"
         },
         formatSalary(salary) {
             const dollarUSLocale = Intl.NumberFormat('en-US', {
