@@ -1,6 +1,6 @@
 <template>
     <v-container>
-        <v-row class="my-5">
+        <v-row class="mt-5">
         <v-col
           class="ma-5"
           cols="12"
@@ -14,7 +14,7 @@
           </v-row>
         </v-col>
       </v-row>
-      <v-row class="my-5">
+      <v-row class="mb-5">
         <v-col
           class="ma-5"
           cols="12"
@@ -62,7 +62,7 @@
                   :disabled="!valid"
                   type="submit"
                   color="success"
-                  class="mr-4"
+                  class="mt-3 mr-4"
                 >
                   Submit
                 </v-btn>

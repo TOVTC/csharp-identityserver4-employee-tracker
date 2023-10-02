@@ -44,7 +44,7 @@
                 :disabled="!valid"
                 type="submit"
                 color="success"
-                class="mr-4"
+                class="mt-3 mr-4"
               >
                 Submit
               </v-btn>

@@ -8,7 +8,7 @@
     <router-link to="/" class="text-decoration-none">  
       <div class="d-flex align-center">
           <v-icon x-large class="ma-3">mdi-badge-account-horizontal</v-icon>
-          <h1 class="ma-3 white--text">Our Company</h1>
+          <h1 class="ma-3 white--text">Employee Tracker</h1>
       </div>
     </router-link>
 
