@@ -13,6 +13,9 @@ const routes = [
   {
     path: '/tracker',
     name: 'tracker',
+    meta: {
+      requiresAuth: true
+    },
     component: () => import('@/views/TrackerView.vue'),
   },
   {
@@ -32,5 +35,19 @@ const router = new VueRouter({
   base: process.env.BASE_URL,
   routes
 })
+
+router.beforeEach(async (to, from, next) => {
+  let app = router.app.$data || { isAuthenticated: false }
+  if (app.isAuthenticated) {
+    next()
+  } else if (to.matched.some(record => record.meta.requiresAuth)) {
+    router.app.authenticate(to.path).then(() => {
+      console.log('authenticating a protected url: ', to.path)
+      next()
+    })
+  } else {
+      next()
+    }
+  })
 
 export default router
