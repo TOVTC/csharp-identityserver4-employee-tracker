@@ -104,6 +104,10 @@ export default {
                     console.log("name: ", this.name)
                     console.log("email: ", this.email)
                     console.log("message: ", this.message)
+                    this.name = ''
+                    this.email = ''
+                    this.message = ''
+                    this.$refs.form.resetValidation()
                 }
             }
         }
