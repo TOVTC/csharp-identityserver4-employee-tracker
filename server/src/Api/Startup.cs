@@ -8,6 +8,16 @@ namespace Api
     {
         public void ConfigureServices(IServiceCollection services)
         {
+            services.AddCors(options =>
+            {
+                options.AddPolicy(name: "_mySpecificOrigins",
+                                  policy =>
+                                  {
+                                      policy.WithOrigins("https://localhost:8080",
+                                          "http://localhost:8080");
+                                  });
+            });
+
             services.AddControllers();
 
             services.AddAuthentication("Bearer")
@@ -33,6 +43,8 @@ namespace Api
         public void Configure(IApplicationBuilder app)
         {
             app.UseRouting();
+
+            app.UseCors("_mySpecificOrigins");
 
             app.UseAuthentication();
             app.UseAuthorization();

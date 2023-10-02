@@ -75,13 +75,15 @@
 </template>
   
 <script>
+import TrackerService from '@/services/TrackerService.js'
+
 export default {
     data: () => ({
         valid: false,
         name: '',
         email: '',
         message: '',
-        about: "At our company, imagination takes form and creativity knows no bounds. We are a dynamic and innovative creative agency committed to transforming visions into vibrant, tangible realities. We are here to infuse your brand, project, or campaign with the kind of creativity that leaves a lasting impression. Our diverse team of visionaries, artists, strategists, and storytellers is united by a common goal: to craft exceptional experiences and narratives that captivate, inspire, and engage.\r\n\r\nWhether you're a startup seeking an identity or an established brand looking to refresh, we're here to turn your aspirations into a vibrant mosaic of success. Join us, and together, we'll bring your vision to life, one piece at a time. Your vision is our mission, and we're excited to explore the limitless possibilities with you.",
+        about: '',
         source: 'https://www.renderforest.com/website-maker',
         rules: {
             name: [
@@ -110,7 +112,11 @@ export default {
                     this.$refs.form.resetValidation()
                 }
             }
-        }
+        },
+    async created() {
+        let about = await TrackerService.getAbout()
+        this.about = about.data.description
+    }
 }
 </script>
 
