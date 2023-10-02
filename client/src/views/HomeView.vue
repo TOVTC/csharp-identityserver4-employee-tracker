@@ -11,14 +11,14 @@
 
         <v-row class="ma-5">
           <v-card
-          elevation="2"
-          width="90%"
+            elevation="2"
+            width="90%"
           >
             <v-form
-            ref="form"
-            v-model="valid"
-            class="ma-5 pa-5"
-            @submit.prevent="search"
+              ref="form"
+              v-model="valid"
+              class="ma-5 pa-5"
+              @submit.prevent="search"
             >
               <v-text-field
                 v-model="username"
@@ -69,7 +69,7 @@ export default {
     rules: {
       username: [
         input => !!input || 'You must enter your username',
-        input => input.trim().length < 3 ? 'You must enter your username' : true
+        input => input.trim().length < 3 || input.trim().length > 10 ? 'You must enter your username' : true
       ],
       password: [
         input => !!input || 'You must enter a valid password',

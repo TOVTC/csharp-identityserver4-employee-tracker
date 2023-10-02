@@ -8,19 +8,25 @@
     <router-link to="/" class="text-decoration-none">  
       <div class="d-flex align-center">
           <v-icon x-large class="ma-3">mdi-badge-account-horizontal</v-icon>
-          <h1 class="ma-3 white--text">Employee Tracker</h1>
+          <h1 class="ma-3 white--text">Our Company</h1>
       </div>
     </router-link>
 
       <v-spacer></v-spacer>
 
       <v-btn
-        href="https://github.com/vuetifyjs/vuetify/releases/latest"
-        target="_blank"
+        to="/tracker"
         text
+        class="mx-2"
       >
-        <span class="mr-2">Latest Release</span>
-        <v-icon>mdi-open-in-new</v-icon>
+        <span class="mx-2">Employees</span>
+      </v-btn>
+      <v-btn
+        to="/about-contact"
+        text
+        class="mx-2"
+      >
+        <span class="mx-2">About/Contact</span>
       </v-btn>
     </v-app-bar>
 

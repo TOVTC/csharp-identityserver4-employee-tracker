@@ -16,6 +16,11 @@ const routes = [
     component: () => import('@/views/TrackerView.vue'),
   },
   {
+    path: '/about-contact',
+    name: 'about-contact',
+    component: () => import('@/views/AboutView.vue'),
+  },
+  {
     path: '/:catchAll(.*)',
     name: '404',
     component: HomeView,
