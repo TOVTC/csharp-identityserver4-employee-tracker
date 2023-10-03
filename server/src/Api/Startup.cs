@@ -6,11 +6,13 @@ namespace Api
 {
     public class Startup
     {
+        readonly string SpecificOrigins = "_mySpecificOrigins";
+
         public void ConfigureServices(IServiceCollection services)
         {
             services.AddCors(options =>
             {
-                options.AddPolicy(name: "_mySpecificOrigins",
+                options.AddPolicy(name: SpecificOrigins,
                                   policy =>
                                   {
                                       policy.WithOrigins("https://localhost:8080",
@@ -44,7 +46,7 @@ namespace Api
         {
             app.UseRouting();
 
-            app.UseCors("_mySpecificOrigins");
+            app.UseCors(SpecificOrigins);
 
             app.UseAuthentication();
             app.UseAuthorization();

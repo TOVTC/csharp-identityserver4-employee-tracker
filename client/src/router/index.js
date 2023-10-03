@@ -37,11 +37,11 @@ const router = new VueRouter({
 })
 
 router.beforeEach(async (to, from, next) => {
-  let app = router.app.$data || { isAuthenticated: false }
+  let app = router.app || { isAuthenticated: false }
   if (app.isAuthenticated) {
     next()
   } else if (to.matched.some(record => record.meta.requiresAuth)) {
-    router.app.authenticate(to.path).then(() => {
+   app.authenticate(to.path).then(() => {
       console.log('authenticating a protected url: ', to.path)
       next()
     })
