@@ -7,19 +7,24 @@ namespace IdentityServer
 {
     public class Startup
     {
-        public IWebHostEnvironment Environment { get; }
-
-        public Startup(IWebHostEnvironment environment)
-        {
-            Environment = environment;
-        }
+        readonly string SpecificOrigins = "_mySpecificOrigins";
 
         public void ConfigureServices(IServiceCollection services)
         {
             // uncomment, if you want to add an MVC-based UI
-            //services.AddControllersWithViews();
+            services.AddControllersWithViews();
 
-            var builder = services.AddIdentityServer()
+            services.AddCors(options =>
+            {
+                options.AddPolicy(name: SpecificOrigins,
+                                  policy =>
+                                  {
+                                      policy.WithOrigins("https://localhost:8080",
+                                          "http://localhost:8080");
+                                  });
+            });
+
+            services.AddIdentityServer()
                 // not recommended for production - you need to store your key material somewhere secure
                 .AddDeveloperSigningCredential()
                 .AddInMemoryApiScopes(Config.ApiScopes)
@@ -28,23 +33,22 @@ namespace IdentityServer
 
         public void Configure(IApplicationBuilder app)
         {
-            if (Environment.IsDevelopment())
-            {
-                app.UseDeveloperExceptionPage();
-            }
+            app.UseDeveloperExceptionPage();
 
             // uncomment if you want to add MVC
-            //app.UseStaticFiles();
-            //app.UseRouting();
-            
+            app.UseStaticFiles();
+            app.UseRouting();
+
+            app.UseCors(SpecificOrigins);
+
             app.UseIdentityServer();
 
             // uncomment, if you want to add MVC
-            //app.UseAuthorization();
-            //app.UseEndpoints(endpoints =>
-            //{
-            //    endpoints.MapDefaultControllerRoute();
-            //});
+            app.UseAuthorization();
+            app.UseEndpoints(endpoints =>
+            {
+                endpoints.MapDefaultControllerRoute();
+            });
         }
     }
 }
