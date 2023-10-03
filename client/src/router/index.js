@@ -24,6 +24,11 @@ const routes = [
     component: () => import('@/views/AboutContactView.vue'),
   },
   {
+    path: '/callback',
+    name: 'callback',
+    component: () => import('@/views/CallbackView.vue')
+  },
+  {
     path: '/:catchAll(.*)',
     name: '404',
     component: HomeView,
@@ -38,6 +43,7 @@ const router = new VueRouter({
 
 router.beforeEach(async (to, from, next) => {
   let app = router.app || { isAuthenticated: false }
+  console.log(to.path)
   if (app.isAuthenticated) {
     next()
   } else if (to.matched.some(record => record.meta.requiresAuth)) {

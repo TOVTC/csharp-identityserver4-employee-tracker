@@ -1,5 +1,6 @@
 ﻿using IdentityServer4;
 using IdentityServer4.Models;
+using Microsoft.AspNetCore.Server.Kestrel.Core;
 using System.Collections.Generic;
 
 namespace IdentityServer
@@ -33,8 +34,8 @@ namespace IdentityServer
                     AllowAccessTokensViaBrowser = true,
 
                     RedirectUris = { "https://localhost:8080/callback" },
-                    PostLogoutRedirectUris = { "https://localhost:8080/" },
-                    AllowedCorsOrigins = { "https://localhost:8080" },
+                    PostLogoutRedirectUris = { "https://localhost:8080" },
+                    AllowedCorsOrigins = { "https://localhost:8080", "http://localhost:8080" },
 
                     AllowedScopes =
                     {
