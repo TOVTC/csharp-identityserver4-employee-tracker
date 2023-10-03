@@ -31,8 +31,8 @@ const globalMethods = {
     }
   },
   signIn(returnPath) {
-    console.log(returnPath)
-    // returnPath ? this.mgr.signinRedirect({ state: returnPath }) : this.mgr.signinRedirect()
+    // console.log(returnPath)
+    returnPath ? this.mgr.signinRedirect({ state: returnPath }) : this.mgr.signinRedirect()
   }
 }
 
