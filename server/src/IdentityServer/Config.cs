@@ -1,4 +1,5 @@
-﻿using IdentityServer4.Models;
+﻿using IdentityServer4;
+using IdentityServer4.Models;
 using System.Collections.Generic;
 
 namespace IdentityServer
@@ -23,6 +24,24 @@ namespace IdentityServer
                         new Secret("EmployeeTracker".Sha256())
                     },
                     AllowedScopes = {"trackerApi"}
+                },
+                new Client
+                {
+                    ClientId = "js",
+                    ClientName = "VueApi JavaScript Client",
+                    AllowedGrantTypes = GrantTypes.Implicit,
+                    AllowAccessTokensViaBrowser = true,
+
+                    RedirectUris = { "https://localhost:8080/callback" },
+                    PostLogoutRedirectUris = { "https://localhost:8080/" },
+                    AllowedCorsOrigins = { "https://localhost:8080" },
+
+                    AllowedScopes =
+                    {
+                        IdentityServerConstants.StandardScopes.OpenId,
+                        IdentityServerConstants.StandardScopes.Profile,
+                        "trackerApi"
+                    },
                 }
             };
     }
