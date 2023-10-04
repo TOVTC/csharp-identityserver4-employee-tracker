@@ -5,4 +5,5 @@ Basic [CSV to JSON algo](https://stackoverflow.com/questions/28543821/convert-cs
 rominator007's answer [here](https://stackoverflow.com/questions/40155182/asp-net-core-default-route) on how to set a default view route</br>
 IdentityServer4 setup following the official documentation [here](https://identityserver4.readthedocs.io/en/latest/quickstarts/0_overview.html) until incorporating Vue.js, wherein instructions by Richard Banks [here](https://www.richard-banks.org/2018/11/securing-vue-with-identityserver-part1.html) were roughly followed</br>
 About Us placeholder text sourced from a template at Render Forest [here](https://www.renderforest.com/website-maker/new/lang/preview-project/template/297?backUrl=websites)</br>
-[CORS](https://learn.microsoft.com/en-us/aspnet/core/security/cors?view=aspnetcore-7.0)
+[CORS](https://learn.microsoft.com/en-us/aspnet/core/security/cors?view=aspnetcore-7.0)</br>
+[StandardScopes](https://stackoverflow.com/questions/72018051/error-scope-identityserverapi-not-found-in-store)

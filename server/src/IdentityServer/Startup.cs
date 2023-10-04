@@ -35,6 +35,7 @@ namespace IdentityServer
                 .AddDeveloperSigningCredential()
                 .AddInMemoryApiScopes(Config.ApiScopes)
                 .AddInMemoryClients(Config.Clients);
+
         }
 
         public void Configure(IApplicationBuilder app)
