@@ -33,6 +33,7 @@ namespace IdentityServer
             services.AddIdentityServer()
                 // not recommended for production - you need to store your key material somewhere secure
                 .AddDeveloperSigningCredential()
+                .AddInMemoryIdentityResources(Config.IdentityResources)
                 .AddInMemoryApiScopes(Config.ApiScopes)
                 .AddInMemoryClients(Config.Clients);
 

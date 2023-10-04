@@ -4,7 +4,7 @@ var mgr = new Oidc.UserManager({
     authority: 'https://localhost:5001',
     client_id: 'js',
     redirect_uri: 'https://localhost:8080/callback',
-    response_type: 'id_token token',
+    response_type: 'code',
     scope: 'openid profile trackerApi',
     post_logout_redirect_uri: 'https://localhost:8080',
     userStore: new Oidc.WebStorageStateStore({ store: window.localStorage })
