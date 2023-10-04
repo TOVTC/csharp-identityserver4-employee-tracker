@@ -3,6 +3,8 @@ module.exports = defineConfig({
   transpileDependencies: [
     'vuetify'
   ],
-
+  devServer: {
+    https: true
+  },
   outputDir: '../server/src/VueApi/wwwroot'
 })

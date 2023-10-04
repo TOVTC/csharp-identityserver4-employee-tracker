@@ -28,8 +28,8 @@ namespace IdentityServerHost.Quickstart.UI
 
                 // https://developer.mozilla.org/en-US/docs/Web/HTTP/Headers/Content-Security-Policy
                 var csp = "default-src 'self'; object-src 'none'; frame-ancestors 'none'; sandbox allow-forms allow-same-origin allow-scripts; base-uri 'self';";
-                // Allow WebSocket connections
-                csp += "connect-src 'self' wss://localhost:44371;";
+                // Allow WebSocket connections -> This error apparently doesn't break the app
+                //csp += "connect-src 'self' wss://localhost:44371;";
                 // also consider adding upgrade-insecure-requests once you have HTTPS in place for production
                 //csp += "upgrade-insecure-requests;";
                 // also an example if you need client images to be displayed from twitter
