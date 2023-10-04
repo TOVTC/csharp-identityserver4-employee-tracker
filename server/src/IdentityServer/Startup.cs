@@ -7,9 +7,15 @@ namespace IdentityServer
 {
     public class Startup
     {
-        //readonly string SpecificOrigins = "_mySpecificOrigins";
+            public IWebHostEnvironment Environment { get; }
 
-        public void ConfigureServices(IServiceCollection services)
+            public Startup(IWebHostEnvironment environment)
+            {
+                Environment = environment;
+            }
+            //readonly string SpecificOrigins = "_mySpecificOrigins";
+
+            public void ConfigureServices(IServiceCollection services)
         {
             // uncomment, if you want to add an MVC-based UI
             services.AddControllersWithViews();
@@ -33,7 +39,10 @@ namespace IdentityServer
 
         public void Configure(IApplicationBuilder app)
         {
-            app.UseDeveloperExceptionPage();
+            if (Environment.IsDevelopment())
+            {
+                app.UseDeveloperExceptionPage();
+            }
 
             // uncomment if you want to add MVC
             app.UseStaticFiles();

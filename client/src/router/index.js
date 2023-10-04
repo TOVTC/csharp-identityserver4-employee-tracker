@@ -43,7 +43,7 @@ const router = new VueRouter({
 
 router.beforeEach(async (to, from, next) => {
   let app = router.app || { isAuthenticated: false }
-  console.log(to.path)
+  // console.log(to.path)
   if (app.isAuthenticated) {
     next()
   } else if (to.matched.some(record => record.meta.requiresAuth)) {
