@@ -97,7 +97,7 @@ export default {
     },
     login() {
       this.loggedIn = true
-      this.$root.signIn('/')
+      this.$root.signIn('/tracker')
     },
     logout() {
       this.loggedIn = false
