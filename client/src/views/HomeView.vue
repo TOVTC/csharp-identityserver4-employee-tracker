@@ -1,6 +1,6 @@
 <template>
   <v-container>
-    <v-row class="my-5">
+    <v-row v-if="!this.$root.isAuthenticated" class="my-5">
       <v-col
         class="ma-5"
         cols="12"
@@ -22,7 +22,7 @@
             <v-card-actions>
               <v-btn
                 text
-                color="teal accent-4"
+                color="green accent-4"
                 @click="login"
               >
                 Redirect Me
@@ -32,7 +32,7 @@
         </v-row>
       </v-col>
     </v-row>
-    <v-row>
+    <v-row v-else>
       <v-col
         class="ma-5"
         cols="12"
@@ -54,7 +54,7 @@
             <v-card-actions>
               <v-btn
                 text
-                color="teal accent-4"
+                color="green accent-4"
                 @click="logout"
               >
                 Redirect Me
@@ -73,7 +73,6 @@ import router from '@/router'
 export default {
   name: 'HomeView',
   data: () => ({
-    // loggedIn: true,
     valid: false,
     visible: false,
     username: '',
@@ -103,18 +102,7 @@ export default {
     logout() {
       this.loggedIn = false
       this.$root.signOut('/')
-    },
-    getUser() {
-      this.$root.getUser()
     }
-  },
-  // beforeMount() {
-  //   console.log(this.getUser())
-  //   if (!this.getUser()) {
-  //     this.loggedIn = false
-  //   } else {
-  //     this.loggedIn = true
-  //   }
-  // }
+  }
 }
 </script>
