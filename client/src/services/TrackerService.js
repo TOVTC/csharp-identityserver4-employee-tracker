@@ -9,18 +9,6 @@ const apiClient = axios.create({
     }
 })
 
-// mgr.getUser().then(function (user) {
-//     var url = "https://localhost:6001/identity";
-
-//     var xhr = new XMLHttpRequest();
-//     xhr.open("GET", url);
-//     xhr.onload = function () {
-//         log(xhr.status, JSON.parse(xhr.responseText));
-//     }
-//     xhr.setRequestHeader("Authorization", "Bearer " + user.access_token);
-//     xhr.send();
-// });
-
 export default {
     apiClient,
     async getDepartments() {

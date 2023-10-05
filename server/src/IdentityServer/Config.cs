@@ -17,8 +17,6 @@ namespace IdentityServer
         public static IEnumerable<ApiScope> ApiScopes =>
             new List<ApiScope>
             {
-                //new ApiScope(IdentityServerConstants.StandardScopes.OpenId),
-                //new ApiScope(IdentityServerConstants.StandardScopes.Profile),
                 new ApiScope("trackerApi", "Employee Tracker Api")
             };
 
@@ -39,7 +37,6 @@ namespace IdentityServer
                 {
                     ClientId = "js",
                     ClientName = "VueApi JavaScript Client",
-                    //AllowedGrantTypes = GrantTypes.Implicit,
                     AllowedGrantTypes = GrantTypes.Code,
                     RequireClientSecret = false,
                     AllowAccessTokensViaBrowser = true,

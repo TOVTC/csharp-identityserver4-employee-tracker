@@ -3,7 +3,6 @@ import App from './App.vue'
 import vuetify from './plugins/vuetify'
 import router from '@/router'
 import mgr from '@/security/security.js'
-import axios from 'axios'
 import TrackerService from '@/services/TrackerService.js'
 
 Vue.config.productionTip = false
@@ -34,6 +33,9 @@ const globalMethods = {
   },
   signIn(returnPath) {
     returnPath ? this.mgr.signinRedirect({ state: returnPath }) : this.mgr.signinRedirect()
+  },
+  signOut(returnPath){
+    returnPath ? this.mgr.signoutRedirect({ state: returnPath }) : this.mgr.signoutRedirect()
   }
 }
 

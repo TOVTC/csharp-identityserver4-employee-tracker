@@ -8,7 +8,7 @@ namespace Api.Controllers
 {
     [Route("api/[controller]")]
     [ApiController]
-    //[Authorize]
+    [Authorize]
     public class TrackerController : ControllerBase
     {
         // GET: api/tracker/departments

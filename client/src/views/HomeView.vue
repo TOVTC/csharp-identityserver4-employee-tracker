@@ -6,49 +6,60 @@
         cols="12"
       >
         <h2 class="headline font-weight-bold mb-3">
-          Login
+          Welcome
         </h2>
 
         <v-row class="ma-5">
           <v-card
-            elevation="2"
-            width="90%"
+            width="35%"
           >
-            <v-form
-              ref="form"
-              v-model="valid"
-              class="ma-5 pa-5"
-              @submit.prevent="search"
-            >
-              <v-text-field
-                v-model="username"
-                :counter="10"
-                :rules="rules.username"
-                label="Username"
-                required
-              ></v-text-field>
-
-              <v-text-field
-                v-model="password"
-                :append-icon="visible ? 'mdi-eye' : 'mdi-eye-off'"
-                :rules="rules.password"
-                :type="visible ? 'text' : 'password'"
-                label="Password"
-                hint="At least 3 characters"
-                counter
-                @click:append="visible = !visible"
-                required
-              ></v-text-field>
-
+            <v-card-text>
+              <h2>Login</h2>
+              <p class="my-3">
+                Please login to view employee information. You will be redirected to an external portal.
+              </p>
+            </v-card-text>
+            <v-card-actions>
               <v-btn
-                :disabled="!valid"
-                type="submit"
-                color="success"
-                class="mt-3 mr-4"
+                text
+                color="teal accent-4"
+                @click="login"
               >
-                Submit
+                Redirect Me
               </v-btn>
-            </v-form>
+            </v-card-actions>
+          </v-card>
+        </v-row>
+      </v-col>
+    </v-row>
+    <v-row>
+      <v-col
+        class="ma-5"
+        cols="12"
+      >
+        <h2 class="headline font-weight-bold mb-3">
+          Protect employee information
+        </h2>
+
+        <v-row class="ma-5">
+          <v-card
+            width="35%"
+          >
+            <v-card-text>
+              <h2>Logout</h2>
+              <p class="my-3">
+                Make sure to logout of your account by clicking on the button below. You will be redirected to an external portal.
+              </p>
+            </v-card-text>
+            <v-card-actions>
+              <v-btn
+                text
+                color="teal accent-4"
+                @click="logout"
+              >
+                Redirect Me
+              </v-btn>
+            </v-card-actions>
           </v-card>
         </v-row>
       </v-col>
@@ -62,6 +73,7 @@ import router from '@/router'
 export default {
   name: 'HomeView',
   data: () => ({
+    // loggedIn: true,
     valid: false,
     visible: false,
     username: '',
@@ -83,7 +95,26 @@ export default {
       if (this.valid) {
         router.push({ name: 'tracker' })
       }
+    },
+    login() {
+      this.loggedIn = true
+      this.$root.signIn('/')
+    },
+    logout() {
+      this.loggedIn = false
+      this.$root.signOut('/')
+    },
+    getUser() {
+      this.$root.getUser()
     }
-  }
+  },
+  // beforeMount() {
+  //   console.log(this.getUser())
+  //   if (!this.getUser()) {
+  //     this.loggedIn = false
+  //   } else {
+  //     this.loggedIn = true
+  //   }
+  // }
 }
 </script>

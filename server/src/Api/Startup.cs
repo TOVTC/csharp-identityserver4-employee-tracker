@@ -16,7 +16,9 @@ namespace Api
                                   policy =>
                                   {
                                       policy.WithOrigins("https://localhost:8080",
-                                          "http://localhost:8080");
+                                          "http://localhost:8080")
+                                      .AllowAnyHeader()
+                                      .AllowAnyMethod();
                                   });
             });
 
