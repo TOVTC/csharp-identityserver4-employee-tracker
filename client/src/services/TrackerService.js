@@ -10,6 +10,7 @@ const apiClient = axios.create({
 })
 
 export default {
+    // export axios instance to implement axios interceptors in main.js to add Bearer token to headers
     apiClient,
     async getDepartments() {
         try {

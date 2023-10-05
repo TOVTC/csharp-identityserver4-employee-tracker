@@ -4,6 +4,7 @@
     * During development, the app can be configured to be served separately with the Vue client served from VS Code (navigate to https://localhost:8080 instead of http - but this will result in a browser security error, so just click into proceed anyway) by right clicking the solution name, going to properties, and enabling or disabling VueApi's start command
     * This app also includes a CLI client to retrieve a token from IdentityServer that is part of its own solution (dev.Client) - when IdentityServer is running, run this app to print a bearer token to the console for API testing purposes
         * Each client that has access to IdentityServer has its own entry in  Config.cs - the first one in this project's config is this test client - that includes the client's Id and repository secret/credentials along with which resources it has access to
+    * The app also has a folder for a csv-to-json converter that was used to change SQL/database CSV data into JSON which can be opened as its own project and run using node.js
     * This app does not include a backend and serves hardcoded data from the API (hence the amount of functions being run in TrackerView.vue - there are a lot of table joins done via frontend as opposed to a traditional backend query)
 * Follow primarily the official documentation to set up IdentityServer and use the Richard Banks tutorial to implement the build output
     * Config for Oidc UserManager in security.js and Identity Server Config.cs should come from the official documentation
