@@ -3,6 +3,8 @@ import App from './App.vue'
 import vuetify from './plugins/vuetify'
 import router from '@/router'
 import mgr from '@/security/security.js'
+import axios from 'axios'
+import TrackerService from '@/services/TrackerService.js'
 
 Vue.config.productionTip = false
 
@@ -31,15 +33,28 @@ const globalMethods = {
     }
   },
   signIn(returnPath) {
-    // console.log(returnPath)
     returnPath ? this.mgr.signinRedirect({ state: returnPath }) : this.mgr.signinRedirect()
   }
 }
 
-new Vue({
+let v = new Vue({
   vuetify,
   router,
   data: globalData,
   methods: globalMethods,
   render: h => h(App)
 }).$mount('#app')
+
+TrackerService.apiClient.interceptors.request.use((config) => {
+  const user = v.$root.user
+  if (user) {
+    const authToken = user.access_token
+    if (authToken) {
+      config.headers.Authorization = `Bearer ${authToken}`
+    }
+  }
+  return config;
+},
+(err) => {
+  return err
+})
