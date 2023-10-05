@@ -57,7 +57,7 @@ namespace IdentityServer
 
                     // silent renew options
                     AllowOfflineAccess = true,
-                    AccessTokenLifetime = 90,
+                    AccessTokenLifetime = 90, // 90 seconds
                     AbsoluteRefreshTokenLifetime = 0,
                     RefreshTokenUsage = TokenUsage.OneTimeOnly,
                     RefreshTokenExpiration = TokenExpiration.Sliding,

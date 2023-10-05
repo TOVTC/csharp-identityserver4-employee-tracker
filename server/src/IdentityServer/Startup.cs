@@ -13,22 +13,11 @@ namespace IdentityServer
             {
                 Environment = environment;
             }
-            //readonly string SpecificOrigins = "_mySpecificOrigins";
 
             public void ConfigureServices(IServiceCollection services)
         {
             // uncomment, if you want to add an MVC-based UI
             services.AddControllersWithViews();
-
-            //services.AddCors(options =>
-            //{
-            //    options.AddPolicy(name: SpecificOrigins,
-            //                      policy =>
-            //                      {
-            //                          policy.WithOrigins("https://localhost:8080",
-            //                              "http://localhost:8080");
-            //                      });
-            //});
 
             services.AddIdentityServer()
                 // not recommended for production - you need to store your key material somewhere secure
@@ -49,8 +38,6 @@ namespace IdentityServer
             // uncomment if you want to add MVC
             app.UseStaticFiles();
             app.UseRouting();
-
-            //app.UseCors(SpecificOrigins);
 
             app.UseIdentityServer();
 
