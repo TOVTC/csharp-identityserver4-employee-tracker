@@ -29,6 +29,11 @@ const routes = [
     component: () => import('@/views/CallbackView.vue')
   },
   {
+    path: '/unauthorized',
+    name: 'unauthorized',
+    component: () => import('@/views/UnauthorizedView.vue')
+  },
+  {
     path: '/:catchAll(.*)',
     name: '404',
     component: HomeView,

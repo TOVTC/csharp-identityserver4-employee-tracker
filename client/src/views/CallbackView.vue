@@ -13,7 +13,7 @@
                 if (result.state !== undefined) { returnToUrl = result.state;}
                 this.$router.push({ path: returnToUrl });
             } catch (e) {
-                this.$router.push({ name: 'Unauthorized' });
+                this.$router.push({ name: 'unauthorized' });
             }
         }
     }
