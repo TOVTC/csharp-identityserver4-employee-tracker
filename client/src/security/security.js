@@ -7,7 +7,11 @@ var mgr = new Oidc.UserManager({
     response_type: 'code',
     scope: 'openid profile trackerApi',
     post_logout_redirect_uri: 'https://localhost:8080',
-    userStore: new Oidc.WebStorageStateStore({ store: window.localStorage })
+    userStore: new Oidc.WebStorageStateStore({ store: window.localStorage }),
+    // silent token renew
+    automaticSilentRenew: true,
+    silent_redirect_uri: 'https://localhost:8080/static/silent-renew.html',
+    accessTokenExpiringNotificationTime: 10
 })
 
 // remove from proudction

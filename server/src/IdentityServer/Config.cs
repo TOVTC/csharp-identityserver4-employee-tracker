@@ -41,7 +41,10 @@ namespace IdentityServer
                     RequireClientSecret = false,
                     AllowAccessTokensViaBrowser = true,
 
-                    RedirectUris = { "https://localhost:8080/callback" },
+                    RedirectUris = { "https://localhost:8080/callback",
+                    // this second redirect uri is for silent token renewal
+                    "https://localhost:8080/static/silent-renew.html"
+                    },
                     PostLogoutRedirectUris = { "https://localhost:8080" },
                     AllowedCorsOrigins = { "https://localhost:8080", "http://localhost:8080" },
 
@@ -51,6 +54,15 @@ namespace IdentityServer
                         IdentityServerConstants.StandardScopes.Profile,
                         "trackerApi"
                     },
+
+                    // silent renew options
+                    AllowOfflineAccess = true,
+                    AccessTokenLifetime = 90,
+                    AbsoluteRefreshTokenLifetime = 0,
+                    RefreshTokenUsage = TokenUsage.OneTimeOnly,
+                    RefreshTokenExpiration = TokenExpiration.Sliding,
+                    UpdateAccessTokenClaimsOnRefresh = true,
+                    RequireConsent = false,
                 }
             };
     }
