@@ -25,9 +25,9 @@
   
   ## Usage Information<a name="usage"></a>
   This application is a mock practice application.</br>
-  </br>![IdentityServer4 Employee Tracker](./screenshots/login.png "IdentityServer4 Employee Tracker")</br>
-  </br>![IdentityServer4 Employee Tracker](./screenshots/about-contact.png "IdentityServer4 Employee Tracker")</br>
-  </br>![IdentityServer4 Employee Tracker](./screenshots/tracker.png "IdentityServer4 Employee Tracker")</br>
+  </br>![IdentityServer4 Employee Tracker](./utils/screenshots/login.png "IdentityServer4 Employee Tracker")</br>
+  </br>![IdentityServer4 Employee Tracker](./utils/screenshots/about-contact.png "IdentityServer4 Employee Tracker")</br>
+  </br>![IdentityServer4 Employee Tracker](./utils/screenshots/tracker.png "IdentityServer4 Employee Tracker")</br>
   
   ## Authors & Acknowledgements<a name="credits"></a>
   Resources and special thanks to:</br>
